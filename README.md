@@ -7,15 +7,18 @@
 
 </div>
 
-Script interactivo en Python que te permite consultar la **fecha de estreno comercial en España** de cualquier película, usando la API de [The Movie Database (TMDB)](https://www.themoviedb.org/).
+Script interactivo en Python que te permite consultar la **fecha de estreno comercial en España** de películas y la **fecha de primera emisión** de series, usando la API de [The Movie Database (TMDB)](https://www.themoviedb.org/).
 
-Solo tienes que escribir el título de la película en español y el script te devuelve la fecha de estreno en cines en formato `dd/mm/aaaa`.
+Solo tienes que escribir el título y el script te devolverá la información. Si hay varios resultados con el mismo nombre, te mostrará una lista para que elijas.
 
 ## ✨ Características
-- 🔍 **Búsqueda en español**: Escribe el título de la película como lo conoces en España.
-- 🎯 **Solo estrenos comerciales**: Filtra únicamente el estreno en cines (theatrical), ignorando premieres y preestrenos.
-- 📅 **Formato español**: Fecha en formato `dd/mm/aaaa`.
-- 💬 **Interfaz tipo chat**: Ejecutas el script una vez y puedes consultar todas las películas que quieras.
+- 🎬 **Películas y Series**: Busca tanto películas como series de TV.
+- 🔍 **Búsqueda inteligente**: Si hay coincidencias múltiples (mismo nombre, remakes, etc.), te permite elegir la correcta.
+- 📅 **Fechas precisas**: 
+  - **Películas**: Estreno en cines de España (theatrical).
+  - **Series**: Fecha de primera emisión mundial.
+- 🇪🇸 **Formato español**: Fechas siempre en formato `dd/mm/aaaa`.
+- 💬 **Interfaz tipo chat**: Ejecutas el script una vez y puedes realizar múltiples consultas.
 
 ## 🚀 Instalación y Puesta en Marcha
 ### 1. Clona el repositorio
@@ -55,15 +58,27 @@ python tmdb_estrenos_espana.py
 ```
 
 ## 💻 Uso
-```python
-🎬 BUSCADOR DE ESTRENOS COMERCIALES EN ESPAÑA
-🔍 Película: el caballero oscuro
-🎬 El caballero oscuro
-📅 13/08/2008
-🔍 Película: parásitos
-🎬 Parásitos
-📅 25/10/2019
-🔍 Película: salir
+```text
+🎬 BUSCADOR DE ESTRENOS (CINE Y SERIES)
+=============================================
+
+ 🔍 Título: avatar
+
+🔎 He encontrado 2 coincidencias:
+   1. Avatar (2009) - 🎬 Película
+   2. Avatar: La leyenda de Aang (2005) - 📺 Serie
+
+👉 Elige un número (o 0 para cancelar): 1
+
+✨ Has seleccionado: Avatar
+📅 Estreno en cines (España): 18/12/2009
+
+ 🔍 Título: breaking bad
+
+✨ Has seleccionado: Breaking Bad
+📅 Primera emisión: 20/01/2008
+
+ 🔍 Título: salir
 👋 ¡Hasta luego!
 ```
 
